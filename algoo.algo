@@ -1,0 +1,54 @@
+PROCEDURE dot_product (v1,v2 : ARRAY_OF INTEGER , var dot : INTEGER)
+VAR
+    i : INTEGER;
+
+BEGIN
+dot :=0;
+    If  (v1.length <> v2.length) then
+        Write(" it is not possible to calculat dot product");
+       else 
+       dot := dot + v1[i]*v2[i];
+    END If
+///////////////
+ALGORITHM vector
+VAR
+    v1,v2 : ARRAY_OF INTEGER [];
+    dot : INTEGER;
+BEGIN
+    dot := dot_product(v1,v2);
+    IF (dot = 0) THEN
+        Write("V1 and V2 are orthogonal");
+    ELSE
+        Write("V1 and V2 are not orthogonal");
+    END IF
+END
+     
+///////////
+FUNCTION dot_product(v1,v2 : ARRAY_OF_INTEGER) : INTEGER
+VAR
+    i, dot : INTEGER;
+BEGIN
+    dot :=0;
+    If (v1.length <> v2.length) THEN
+        Write("it is not possible to  calculat dot product");
+        else 
+        dot := dot + v1[i]*v2[i];
+   RETURN dot ;
+   End If
+END
+
+///////////
+
+ALGORITHM vector2
+VAR
+    v1,v2 : ARRAY_OF INTEGER [ ];
+    dot : INTEGER;
+BEGIN
+   
+    dot := dot_product(v1,v2);
+    If (dot = 0) THEN
+        Write("V1 and V2 are orthogonal");
+    ELSE
+        Write("V1 and V2 are not orthogonal");
+    END If
+END
